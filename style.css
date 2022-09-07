@@ -1,0 +1,260 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-white: #fff;
+  --color-black: #000;
+
+  /* Header */
+  --header-text-color: #212122;
+
+  /* Section */
+  --section-search-bar-border-color: #dfe1e5;
+  --section-search-bar-glass-color: #9aa0a6;
+  --section-search-bar-btns-text-color: #3c4043;
+  --section-search-bar-btns-button-background-color: #f8f9fa;
+  --section-language-normaltext-color: #4d5157;
+  --section-language-linktext-color: #1a0dab;
+
+  /* Footer */
+  --footer-text-color: #707579;
+  --footer-background-color: #f2f2f2;
+  --footer-line-color: #dadce0;
+}
+
+body {
+  font-family: arial, sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+}
+
+li {
+  list-style-type: none;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 8px;
+}
+
+header ul {
+  display: flex;
+  align-items: center;
+}
+
+header ul li .items {
+  margin-right: 15px;
+}
+
+header a {
+  text-decoration: none;
+  color: var(--header-text-color);
+  font-size: 13px;
+}
+
+header a:hover {
+  text-decoration: underline;
+}
+
+.menu-icon,
+.user-icon {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  margin: 0px 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-icon:hover,
+.user-icon:hover {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+.user-icon i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-icon .user {
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  background-color: cornflowerblue;
+  color: white;
+}
+
+/* Section */
+section {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-img {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  flex-grow: 1;
+}
+
+.logo-img img {
+  width: 272px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid var(--section-search-bar-border-color);
+  border-radius: 20px;
+  width: 582px;
+  height: 44px;
+  margin: 20px;
+}
+
+.search-bar:hover {
+  box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+.search-bar .glass {
+  font-size: 14px;
+  padding: 16px;
+  color: var(--section-search-bar-glass-color);
+}
+
+.search-bar input {
+  width: 100%;
+  border: none;
+  font-size: 16px;
+}
+
+.search-bar input:focus {
+  outline: none;
+}
+
+.search-bar .google-mic {
+  width: 30px;
+  margin: 10px;
+}
+
+.search-bar-btns button {
+  font-size: 14px;
+  color: var(--section-search-bar-btns-text-color);
+  border: none;
+  border-radius: 3px;
+  background-color: var(--section-search-bar-btns-button-background-color);
+  height: 36px;
+  margin: 11px 4px;
+}
+
+.search-bar-btns button:hover {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+}
+
+.google-search {
+  width: 128px;
+}
+
+.lucky-btn {
+  width: 140px;
+}
+
+.language {
+  text-align: center;
+  font-size: small;
+  margin: 15px 0px 24px;
+  flex-grow: 1;
+}
+
+.language p {
+  color: var(--section-language-normaltext-color);
+}
+
+.language p a {
+  color: var(--section-language-linktext-color);
+  text-decoration: none;
+}
+
+.language p a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  background-color: var(--footer-background-color);
+  color: var(--footer-text-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--footer-text-color);
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.upper-footer {
+  height: 48px;
+  font-size: 15px;
+  border-bottom: 1px solid var(--footer-line-color);
+  padding: 15px 30px;
+}
+
+.lower-footer {
+  height: 45px;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0px 20px;
+}
+
+.lower-footer ul {
+  display: flex;
+}
+
+.lower-footer ul a {
+  padding: 15px;
+}
+
+.lower-footer ul a:hover {
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 664px) {
+  .search-bar {
+    width: 90%;
+  }
+
+  .footer {
+    height: 150px;
+  }
+
+  .upper-footer {
+    height: 50px;
+  }
+
+  .lower-footer {
+    height: 100px;
+    flex-direction: column;
+  }
+}
